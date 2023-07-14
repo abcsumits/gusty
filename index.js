@@ -19,7 +19,7 @@ function renderWeatherInfo(data){
 }
 function getLocation(){
   if (navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(ShowPosition)
+    navigator.geolocation.getCurrentPosition(showPosition)
   }
   else{
     console.log("No geolocation support")
