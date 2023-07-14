@@ -26,7 +26,7 @@ function getLocation(){
   } 
 }
 
-showPosition(position){
+function showPosition(position){
   let lat=position.coords.latitude
   let longi =position.coords.longitude
   console.log(lat)
