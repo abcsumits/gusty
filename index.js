@@ -18,13 +18,14 @@ function renderWeatherInfo(data){
   
 }
 function getLocation(){
-  if (navigator.geolocation)
-  {navigator.geolocation.getCurrentPosition(ShowPosition)}
+  if (navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(ShowPosition)
+  }
   else{
     console.log("No geolocation support")
-  }
-    
+  } 
 }
+
 showPosition(position){
   let lat=position.coords.latitude
   let longi =position.coords.longitude
