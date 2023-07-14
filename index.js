@@ -17,3 +17,17 @@ function renderWeatherInfo(data){
   document.body.appendChild(newPara)
   
 }
+function getLocation(){
+  if (navigator.geolocation)
+  {navigator.geolocation.getCurrentPosition(ShowPosition)}
+  else{
+    console.log("No geolocation support")
+  }
+    
+}
+showPosition(position){
+  let lat=position.coords.latitude
+  let longi =position.coords.longitude
+  console.log(lat)
+  console.log(longi)
+}
