@@ -37,8 +37,9 @@ function switchTab(clickedTab) {
 userTab.addEventListener("click", () => {
   switchTab(userTab);
 });
-searchTab.addEventListener("click", 
+searchTab.addEventListener("click", ()=>{
   switchTab(searchTab);
+}
 );
 
 // - - - - - - - - - - - -User Weather Handling- - - - - - - - - - - -
