@@ -38,7 +38,23 @@ userTab.addEventListener("click", () => {
   switchTab(userTab);
 });
 searchTab.addEventListener("click", () => {
-  switchTab(searchTab);
+  const clickedTab=searchTab
+  apiErrorContainer.classList.remove("active");
+  if (clickedTab !== currentTab) {
+    currentTab.classList.remove("current-tab");
+    currentTab = clickedTab;
+    currentTab.classList.add("current-tab");
+    if (!searchForm.classList.contains("active")) {
+      userInfoContainer.classList.remove("active");
+      grantAccessContainer.classList.remove("active");
+      searchForm.classList.add("active");
+    } else {
+      searchForm.classList.remove("active");
+      userInfoContainer.classList.remove("active");
+      getFromSessionStorage();
+    }
+    // console.log("Current Tab", currentTab);
+  }
 });
 
 // - - - - - - - - - - - -User Weather Handling- - - - - - - - - - - -
