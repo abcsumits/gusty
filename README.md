@@ -1,2 +1,2 @@
 # Gusty
-https://abcsumits-weatherapp.netlify.app/
+https://gusty.netlify.app/
